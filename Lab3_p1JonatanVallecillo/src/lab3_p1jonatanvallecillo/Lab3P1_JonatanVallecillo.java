@@ -38,6 +38,7 @@ public class Lab3P1_JonatanVallecillo {
                         resultado += dif;                                                                               
                     }
                     System.out.println(resultado);
+                    break;
                 
                 case 2:
                     System.out.println("Pocket Monsters");
@@ -75,7 +76,7 @@ public class Lab3P1_JonatanVallecillo {
                                     defen2 = 0.8;                                    
                                     ataq2 = 75;
                                     
-                                    for (int i = 1; i > 1; i++){
+                                    for (int i = 1; i < 10; i++){
                                         System.out.println("------- Ronda "+i+" --------");                                    
                                         System.out.println("Vida de pokemon 1: "+vida);
                                         System.out.println("Vida de pokemon 2: "+ vida2);
@@ -109,7 +110,7 @@ public class Lab3P1_JonatanVallecillo {
                                     defen2 = 0.75;                                    
                                     ataq2 = 70;
                                     
-                                    for (int i = 1; i > 1; i++){
+                                    for (int i = 1; i < 10; i++){
                                         System.out.println("------- Ronda "+i+" --------");                                    
                                         System.out.println("Vida de pokemon 1: "+vida);
                                         System.out.println("Vida de pokemon 2: "+ vida2);
@@ -143,7 +144,7 @@ public class Lab3P1_JonatanVallecillo {
                                     defen2 = 0.75;                                    
                                     ataq2 = 70;
                                     
-                                    for (int i = 1; i > 1; i++){
+                                    for (int i = 1; i < 10 ; i++){
                                         System.out.println("------- Ronda "+i+" --------");                                    
                                         System.out.println("Vida de pokemon 1: "+vida);
                                         System.out.println("Vida de pokemon 2: "+ vida2);
@@ -176,7 +177,7 @@ public class Lab3P1_JonatanVallecillo {
                                     defen2 = 0.85;                                    
                                     ataq2 = 80;
                                     
-                                    for (int i = 1; i > 1; i++){
+                                    for (int i = 1; i < 10; i++){
                                         System.out.println("------- Ronda "+i+" --------");                                    
                                         System.out.println("Vida de pokemon 1: "+vida);
                                         System.out.println("Vida de pokemon 2: "+ vida2);
@@ -260,7 +261,7 @@ public class Lab3P1_JonatanVallecillo {
                                     defen2 = 0.75;                                    
                                     ataq2 = 70;
                                     
-                                    for (int i = 1; i > 1; i++){
+                                    for (int i = 1; i < 10; i++){
                                         System.out.println("------- Ronda "+i+" --------");                                    
                                         System.out.println("Vida de pokemon 1: "+vida);
                                         System.out.println("Vida de pokemon 2: "+ vida2);
@@ -294,7 +295,7 @@ public class Lab3P1_JonatanVallecillo {
                                     defen2 = 0.75;                                    
                                     ataq2 = 70;
                                     
-                                    for (int i = 1; i > 1; i++){
+                                    for (int i = 1; i < 10; i++){
                                         System.out.println("------- Ronda "+i+" --------");                                    
                                         System.out.println("Vida de pokemon 1: "+vida);
                                         System.out.println("Vida de pokemon 2: "+ vida2);
@@ -328,7 +329,7 @@ public class Lab3P1_JonatanVallecillo {
                                     defen2 = 0.85;                                    
                                     ataq2 = 80;
                                                                         
-                                    for (int i = 1; i > 1; i++){
+                                    for (int i = 1; i < 10; i++){
                                         System.out.println("------- Ronda "+i+" --------");                                    
                                         System.out.println("Vida de pokemon 1: "+vida);
                                         System.out.println("Vida de pokemon 2: "+ vida2);
@@ -355,6 +356,7 @@ public class Lab3P1_JonatanVallecillo {
                                     }
                             }
                     }
+                break;
                     
                 case 3:
                     System.out.println("Asterisco en casa!");
@@ -364,16 +366,13 @@ public class Lab3P1_JonatanVallecillo {
                     int contador = 1;
                     while ((altura % 2 == 1) && (altura >= 7) && (contador < altura)){
                         for (int m = 1; m <= altura; m++){
-                                for (int n = 1; n <= longitud; n++){
-                                    System.out.print(" * ");
-                                }              
-                            System.out.println(" ");
-                        }    
-                        contador += 1;
-                    }
-                            
+                            for (int n = 1; n <= longitud; n++){
+                                System.out.print(" * ");
+                            }    
+                            System.out.println(" ");  
                             contador += 1;
-                        
+                        }
+                    }    
                         System.out.println(" ");
                     }
 
