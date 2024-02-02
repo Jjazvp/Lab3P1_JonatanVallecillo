@@ -27,7 +27,7 @@ public class Lab3P1_JonatanVallecillo {
                 case 1:
                     int continuar = 1;
                     
-                    while(continuar == 1){
+                    while(continuar == 1){//ciclo validación si el usuario desea continuar
                         System.out.println("Bienvenido a los 75 juegos del hambre");
                         System.out.print("Elija distrito donde se seleccionaran los tributos: ");
                         int distrito = zoro.nextInt();
@@ -38,63 +38,75 @@ public class Lab3P1_JonatanVallecillo {
                                 case 1:
                                     int masc = rand.nextInt(2);
                                     int fem = rand.nextInt(2);
-                                    if(masc == 0 && fem == 0){
-                                        System.out.println("La tributo fememina es Casmere");
-                                        System.out.println("El tributo masculino es Gloss");
-                                    }else if(masc == 0 && fem == 1){
-                                        System.out.println("La tributo femenina es Glimmer");
-                                        System.out.println("El tributo masculino es Gloss");
-                                    }else if(masc == 1 && fem == 0){
-                                        System.out.println("La tributo femenina es Cashmere");
-                                        System.out.println("El tributo masculino es Marvel");
-                                    }else{
-                                        System.out.println("La tributo femenina es Glimmer");
-                                        System.out.println("El tributo masculino es Marvel");
+                                    switch(masc){
+                                        case 0:
+                                            System.out.println("El tributo masculino es Gloss");
+                                            break;
+                                        case 1:
+                                            System.out.println("El tributo masculino es Marvel");
+                                            break;
+                                    }
+                                    
+                                    switch(fem){
+                                        case 0:
+                                           System.out.println("La tributo fememina es Casmere"); 
+                                           break;
+                                        case 1:
+                                            System.out.println("La tributo femenina es Glimmer");
+                                            break;
                                     }
                                     break;
                                     
                                 case 11: 
                                     masc = rand.nextInt(2);
                                     fem = rand.nextInt(2);
-                                    if(masc == 0 && fem == 0){
-                                        System.out.println("La tributo fememina es Rue");
-                                        System.out.println("El tributo masculino es Finnick Odair");
-                                    }else if(masc == 0 && fem == 1){
-                                        System.out.println("La tributo femenina es Johana Mason");
-                                        System.out.println("El tributo masculino es Finnick Odair");
-                                    }else if(masc == 1 && fem == 0){
-                                        System.out.println("La tributo femenina es Rue");
-                                        System.out.println("El tributo masculino es Thresh");
-                                    }else{
-                                        System.out.println("La tributo femenina es Johana Mason");
-                                        System.out.println("El tributo masculino es Thresh");
+                                    switch(masc){
+                                        case 0:
+                                            System.out.println("El tributo masculino es Finnick Odair");
+                                            break;
+                                        case 1:
+                                            System.out.println("El tributo masculino es Thresh");
+                                            break;
+                                    }
+                                    
+                                    switch(fem){
+                                        case 0:
+                                           System.out.println("La tributo fememina es Rue");
+                                           break;
+                                        case 1:
+                                            System.out.println("La tributo femenina es Johana Mason");
+                                            break;
                                     }
                                     break;
                                     
                                 case 12:
                                     masc = rand.nextInt(2);
                                     fem = rand.nextInt(2);
-                                    if(masc == 0 && fem == 0){
-                                        System.out.println("La tributo fememina es Katniss Everdeen");
-                                        System.out.println("El tributo masculino es Peeta Mellark");
-                                    }else if(masc == 0 && fem == 1){
-                                        System.out.println("La tributo femenina es Lucy Gray");
-                                        System.out.println("El tributo masculino es Peeta Mellark");
-                                    }else if(masc == 1 && fem == 0){
-                                        System.out.println("La tributo femenina es Katniss Everdeen");
-                                        System.out.println("El tributo masculino es Haymich Abernathy");
-                                    }else{
-                                        System.out.println("La tributo femenina es Lucy Gray");
-                                        System.out.println("El tributo masculino es Haymich Abernathy");
+                                    switch(masc){
+                                        case 0:
+                                            System.out.println("El tributo masculino es Peeta Mellark");
+                                            break;
+                                        case 1:
+                                            System.out.println("El tributo masculino es Haymich Abernathy");
+                                            break;
                                     }
-                                    System.out.println();
+                                    
+                                    switch(fem){
+                                        case 0:
+                                           System.out.println("La tributo fememina es Katniss Everdeen");
+                                           break;
+                                        case 1:
+                                            System.out.println("La tributo femenina es Lucy Gray");
+                                            break;
+                                    }
                                     break;
+                                    
                             }
                             System.out.println("Desea continuar? si (1) no (otro)");
                             continuar = zoro.nextInt();
                             System.out.println();
                             
-                        }else{
+                        }else{//validación cuando el usuario ingresa un número que no se 1, 11 o 12
                             System.out.println("Ingreso un distrito innexistente");
                             System.out.println("Intente de nuevo");
                         }
@@ -111,7 +123,7 @@ public class Lab3P1_JonatanVallecillo {
                         System.out.println();
                         
                         if (palabra.length() == 5){
-                            while(turnos < 6){
+                            while(turnos < 6){//validación de que los turnos no pasen mas de 6 
                                 
                                 int longitud = 1;
                                 while(longitud == 1){
@@ -121,7 +133,7 @@ public class Lab3P1_JonatanVallecillo {
                                     
                                     if(adivinar.length() == 5){
                                         longitud = 0;
-                                    }else{
+                                    }else{//validación de que el usuario no haya ingresado un palabra de más o menos de 5 letras
                                         System.out.println();
                                         System.out.println("Ingreso una palabra de longitud invalida");
                                         System.out.println("Intente de nuevo (este intento no contara)");
@@ -133,11 +145,13 @@ public class Lab3P1_JonatanVallecillo {
                                 char letra1 = ' ';
                                 char letra2 = ' ';
                                 int cont = 0;
+                                int contletra = 0;
                                 while(cont < 5){
                                     letra1 = palabra.charAt(cont);
                                     letra2 = adivinar.charAt(cont);
                                     if (letra1 == letra2){
                                         temporal += letra1;
+                                        contletra += 1; //validación de si el usuarion ingresó la palabra correcta
                                     }else{
                                         temporal += "-";
                                     }
@@ -149,22 +163,8 @@ public class Lab3P1_JonatanVallecillo {
                                 turnos ++;
                                 System.out.println();
                                 
-                                int palabraint = 0;
-                                int contpalabra = 0;
-                                while(contpalabra < palabra.length()-1){
-                                    palabraint += palabra.charAt(contpalabra);
-                                    contpalabra++;
-                                }
-                                
-                                int adivinarint = 0;
-                                int contadivinar = 0;
-                                while(contadivinar < adivinar.length()-1){
-                                    adivinarint += adivinar.charAt(contadivinar);
-                                    contadivinar++;
-                                }
-                                
-                                if(adivinarint == palabraint){
-                                    turnos = 8;
+                                if(contletra == 5){//validación de si el usuarion ingresó la palabra correcta
+                                    turnos = 8; // El 8 solo se escogí de manera random, no tiene un significado más allá de eso
                                 }
                             }
                         }else{
